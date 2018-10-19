@@ -1,0 +1,22 @@
+Source: greengrass-core
+Section: non-free/net
+Standards-Version: 3.9.7
+Priority: optional
+Maintainer: Joshua Clayton <joshua.clayton@vivintsolar.com>
+Build-Depends: debhelper (>= 9)
+
+Package: greengrass-core
+Architecture: any
+Depends: ${misc:Depends},
+ python (>= 2.7),
+ openssl (>= 1.0.1)
+Description: AWS Greengrass edge compute package
+ AWS Greengrass is software that lets you run local compute, messaging, data
+ caching, sync, and ML inference capabilities for connected devices in a secure
+ way. With AWS Greengrass, connected devices can run AWS Lambda functions, keep
+ device data in sync, and communicate with other devices securely – even when
+ not connected to the Internet. Using AWS Lambda, Greengrass ensures your IoT
+ devices can respond quickly to local events, use Lambda functions running on
+ Greengrass Core to interact with local resources, operate with intermittent
+ connections, stay updated with over the air updates, and minimize the cost of
+ transmitting IoT data to the cloud.

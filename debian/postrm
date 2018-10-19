@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ purge = "$1" ]; then
+    if [ -x "$(command -v deluser)" ]; then
+        deluser --quiet --system ggc_user > /dev/null || true
+        delgroup --quiet --system ggc_group > /dev/null || true
+    fi
+fi

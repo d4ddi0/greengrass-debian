@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/default.mk
+
+DEB_BUILD_OPTIONS += nostrip noautodbgsym
+DEB_INSTALL_DIR := debian/greengrass-core/opt
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p $(DEB_INSTALL_DIR)
+	tar -C $(DEB_INSTALL_DIR) -xf $(CURDIR)/greengrass-linux-armv7l-$(DEB_VERSION).tar.gz
+
+override_dh_shlibdeps:
+	#we have to skip this step due to missing cross compile libraries
