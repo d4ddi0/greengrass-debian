@@ -3,7 +3,8 @@ set -e
 
 if [ "$1" = "configure" ]; then
     if [ -z "`id -u gg-user 2> /dev/null`" ]; then
-        adduser --home /opt/greengrass  --quiet --system --no-create-home \
-        --group ggc_group ggc_user || true
+        addgroup --system --quiet ggc_group || true
+        adduser --home /opt/greengrass --quiet --system --no-create-home \
+            --ingroup ggc_group ggc_user || true
     fi
 fi
