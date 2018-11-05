@@ -6,5 +6,7 @@ if [ "$1" = "configure" ]; then
         addgroup --system --quiet ggc_group || true
         adduser --home /opt/greengrass --quiet --system --no-create-home \
             --ingroup ggc_group ggc_user || true
+        systemctl enable greengrass-core.service
+        systemctl restart greengrass-core.service
     fi
 fi
