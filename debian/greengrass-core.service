@@ -5,8 +5,8 @@ After=network-online.target
 [Service]
 Type=forking
 PIDFile=/var/run/greengrassd.pid
-ExecStart=/opt/greengrass/ggc/core/greengrassd start
-ExecReload=/opt/greengrass/ggc/core/greengrassd restart
+ExecStart=/opt/greengrass/ggc/core/greengrassd -i start
+ExecReload=/opt/greengrass/ggc/core/greengrassd -i restart
 ExecStop=/opt/greengrass/ggc/core/greengrassd stop
 Restart=on-failure
 RestartSec=15
