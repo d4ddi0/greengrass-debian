@@ -1,5 +1,8 @@
 greengrass-core (1.6.0) unstable; urgency=medium
 
-  * build debain package around aws greengrass package
+  * fix: add the group before adding the user
+  * fix: run insecure greengrass
+  * feature: Add systemd service file
+  * build debian package around aws greengrass package
 
  -- Joshua A Clayton <joshua.clayton@vivintsolar.com>  Tue, 09 Oct 2018 16:00:00 -0600
